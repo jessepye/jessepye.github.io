@@ -1,0 +1,49 @@
+#container
+{
+	max-width: 800px;
+	margin: 10px auto;
+	background-color: #fff;
+	color: #333;
+	border: 1px solid gray;
+	line-height: 28px;
+        font-size: 16px;
+}
+
+#top
+{
+	padding: .5em;
+	background-color: #ddd;
+	border-bottom: 1px solid gray;
+	text-align: center;
+}
+#top h1, h2
+{
+	padding: 5px;
+	margin: 5px;
+}
+
+
+#content
+{
+	margin-left: 20px;
+	border-left: 1px solid gray;
+	margin-right: 20px;
+	border-right: 1px solid gray;
+	padding: 1em;
+}
+
+#content h3
+{
+    text-align: center;
+}
+
+#content h2 {margin: 0 0 .5em 0; }
+
+#portrait
+{
+	float: right;
+	width: 100px;
+	margin: 2px;
+	padding: 0.5em;
+        border-radius: 25%;
+}

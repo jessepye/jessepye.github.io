@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html>
+
+    <head>
+        <title>Coin Value Estimator</title>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0/dist/Chart.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/emn178/chartjs-plugin-labels/src/chartjs-plugin-labels.js"></script>
+        <link rel="stylesheet" type="text/css" href="style.css?version=19">
+    </head>
+
+    <body>
+        <div id="container">
+            <h1>Coin Value Estimator</h1>
+            <div id="intro">
+                <p>
+                    Do you have a jar of spare change, sitting in your bedroom? Have you wondered how much all those coins were worth? Simply weigh them, and this tool will tell you how much money you have!
+                </p>
+            </div>
+            <div id="userInputArea">
+                <form id="typeOfEstimateArea" onsubmit="updateGraphs(); return false">
+                    <select id="typeSelector" onchange="updateInputArea()">
+                        <option value="simple">Simple Estimate</option>
+                        <option value="sample">Sample-Based Estimate</option>
+                    </select>
+                    <p id="explanation">
+                        Enter the total weight of your coins below, not including the weight of any containers.
+                    </p>
+                </form>
+                <form id="weightInputArea" onsubmit="updateGraphs(); return false">
+                    <table width="600">
+                        <tr>
+                            <td> <input type="number" step="0.01" name="weight" size="15"> </td>
+                            <td>
+                                <select id="unitSelector">
+                                    <option value="grams">grams</option>
+                                    <option value="pounds">pounds</option>
+                                </select>
+                            </td>
+                        </tr>
+                    </table>
+                </form>
+                <form id="coinInputArea" onsubmit="updateGraphs(); return false">
+                    <table width="600">
+                        <tr>
+                            <td> <input type="number" name="quarters" size="15"> </td> <td> Quarters </td>
+                        </tr>
+                        <tr>
+                            <td> <input type="number" name="dimes" size="15"> </td> <td> Dimes </td>
+                        </tr>
+                        <tr>
+                            <td> <input type="number" name="nickels" size="15"> </td> <td> Nickels </td>
+                        </tr>
+                        <tr>
+                            <td> <input type="number" name="pennies" size="15"> </td> <td> Pennies </td>
+                        </tr>
+                    </table>
+                </form>
+                <input type="button" class="button" value="Submit" onclick="updateGraphs()">
+            </div>
+            <div id="finalEstimate">
+                <p id="finalEstimateParagraph">
+
+                </p>
+            </div>
+            <div id="chartArea">
+                <div class="row">
+                    <div class="column">
+                        <div class="canvasContainer"><canvas id="numberChart" width="100" height="200"></canvas></div>
+                    </div>
+                    <div class="column">
+                        <div class="canvasContainer"><canvas id="weightChart" width="100" height="200"></canvas></div>
+                    </div>
+                    <div class="column">
+                        <div class="canvasContainer"><canvas id="valueChart" width="100" height="200"></canvas></div>
+                    </div>
+                    <button class="collapsible">Where do these numbers come from?</button>
+                    <div class="content">
+                        <p>You might wonder: How can we assume that about 30% of the coins will be quarters, 40% will be pennies, and so on?</p>
+                        <p>It comes from the assumption that when you do your shopping and you get some change, your odds of getting 24 cents, or 82 cents, or any other value, are approximately the same. Thus, we look at the coins needed to produce 99 cents (3 quarters, 2 dimes, and 4 pennies), then we look at the coins needed to produce 98 cents, then 97, all the way down to 1 cent, and add up all these coins. It turns out, when you add all these values together, you need 150 quarters, 80 dimes, 40 nickels, and 200 pennies. This is the approximate distribution of a random collection of spare change.</p>
+                        <p>This doesn't work, of course, if you're the kind of person who is constantly removing the quarters from the coin jar in order to do laundry. If that is the case, you should switch from the "Simple Estimate" to the "Sample-Based Estimate" at the top of the page. This will allow you to provide an approximation of the distribution of each type of coin.</p>
+                    </div>             
+                </div>
+            </div>
+        </div>
+
+        <script src="script.js"></script>
+    </body>
+</html>

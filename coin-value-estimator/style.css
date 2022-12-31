@@ -1,0 +1,143 @@
+#container {
+    max-width: 800px;
+    margin: 10px auto;
+    background-color: #fff;
+    color: #333;
+    border: 1px solid gray;
+    line-height: 28px;
+    font-size: 16px;
+    padding: 1em;
+}
+#intro {
+    font-size: 16px;
+}
+#explanation {
+    font-size: 16px;
+}
+h1 {
+    text-align: center;
+    border-bottom: 1px solid black;
+    padding-bottom: 1em;
+    
+}
+
+#userInputArea{
+    text-align: center;
+}
+
+table {
+    margin: auto;
+    width: 50%;
+}
+
+input[type=number] {
+    width: 100%;
+    padding: 8px 16px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    -moz-appearance:textfield; /* Firefox */
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+select {
+  width: 100%;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  background-color: #f1f1f1;
+}
+
+#typeSelector {
+    max-width: 200px;
+}
+
+#unitSelector {
+    width: 90px;
+}
+
+#finalEstimate {
+    text-align: center;
+    font-size:22px;
+    /*border: 1px dashed #2f3ab5;*/
+    display:none;
+    margin: auto;
+    width: 50%;
+}
+
+.button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 12px 22px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1em;
+}
+
+#money {
+    color: #85bb65;
+    font-weight: bold;
+}
+
+/* Three image containers (use 25% for four, and 50% for two, etc) */
+.column {
+    margin: auto;
+    float: left;
+    width: 32%;
+    padding: 2px;
+}
+
+/* Clear floats after image containers */
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.canvasContaier {
+    max-width: 100px;
+    padding: 1em;
+}
+
+#coinInputArea {
+    display: none;
+}
+
+#chartArea {
+    display: none;
+}
+
+canvas {
+    /*border: 1px solid #0990ff;*/
+}
+.collapsible {
+    background-color: #aaa;
+    color: white;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    text-align: center;
+}
+
+.active, .collapsible:hover {
+    background-color: #888;
+}
+
+.content {
+    padding: 0 18px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    background-color: #f1f1f1;
+}
