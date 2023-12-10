@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Practice Test 2 for Julian 😎
+title: Practice Test 2 for Julian 😀
 permalink: /julian-practice-test-2
 ---
 
