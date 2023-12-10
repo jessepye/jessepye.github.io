@@ -30,7 +30,7 @@ OOXXXX
 
 1. At a basketball game, \\(\frac{18}{40}\\) people are wearing glasses. Write a percent equal to the number of people wearing glasses.
 
-1. Jesse walked to school on 10 of the 20 school days in February. Write a value that is equivalent to the fraction of the school days in February that Carlos walked to school?
+1. Jesse walked to school on 10 of the 20 school days in February. Write a value that is equivalent to the fraction of the school days in February that Jesse walked to school?
 
 1. Cats spend  \\(\frac{7}{8}\\)of their day at sleeping.  Write a percent that represents the amount of time that cats spend sleeping.
 
